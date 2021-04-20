@@ -1,4 +1,5 @@
 import express from 'express';
+import './database';
 
 // GET = Buscas
 // POST = Criação
