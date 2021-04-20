@@ -23,10 +23,10 @@ routes.post("/settings", async (request, response) => {
 
   const settings = settingsRepository.create({
     chat,
-    username
-  })
+    username,
+  });
 
-  await settingsRepository.save(settings)
+  await settingsRepository.save(settings);
 
   return response.json(settings);
 })
