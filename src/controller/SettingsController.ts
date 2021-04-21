@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { getCustomRepository } from "typeorm";
 import { SettingsRepository } from "../repositories/SettingsRepository";
-import { SettingsService } from "../services/ServiceSettings";
+import { SettingsService } from "../services/SettingsService";
 
 class SettingsController {
   async create(request, response) {
