@@ -6,7 +6,7 @@ export class CreateConnections1619103916946 implements MigrationInterface {
         await queryRunner.createTable(
             new Table(
                 {
-                    name: "connection",
+                    name: "connections",
                     columns: [{
                         name: "id",
                         type: "uuid",
