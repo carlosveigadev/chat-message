@@ -28,7 +28,7 @@ class SettingsController {
     return response.json(settings);
   }
 
-  async udpate(request: Request, response: Response) {
+  async update(request: Request, response: Response) {
     const { username } = request.params;
     const { chat } = request.body;
 
