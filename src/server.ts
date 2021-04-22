@@ -12,7 +12,7 @@ app.set("views", path.join(__dirname, "..", "public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html"); 
 
-app.get("/", (request, response) => {
+app.get("/pages/client", (request, response) => {
   return response.render("html/client.html")
 })
 
