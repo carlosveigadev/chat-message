@@ -51,7 +51,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
 
   socket.on("admin_send_to_client", message => {
     socket_admin_id = message.socket_id;
-    
+
     const template_admin = document.getElementById("admin-template").innerHTML;
 
     const rendered = Mustache.render(template_admin, {
@@ -61,3 +61,14 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
     document.getElementById("messages").innerHTML += rendered;
   });
 });
+
+document.querySelector("#send_message_button").addEventListener("click", (event) => {
+  const text = document.getElementById("message_user");
+
+  const params = {
+    text,
+    socket_admin_id,
+  }
+
+  socket.emit("client_send_to_admin", params);
+})
