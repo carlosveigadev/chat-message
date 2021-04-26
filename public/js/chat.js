@@ -1,4 +1,5 @@
 let socket_admin_id = null;
+let emailUser = null;
 
 document.querySelector("#start_chat").addEventListener("click", (event) => {
   const socket = io();
@@ -11,6 +12,8 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
   
 
   const email = document.getElementById("email").value;
+  emailUser = email;
+
   const text = document.getElementById("txt_help").value;
 
   socket.on("connect", () => {
@@ -71,4 +74,13 @@ document.querySelector("#send_message_button").addEventListener("click", (event)
   }
 
   socket.emit("client_send_to_admin", params);
+
+  const template_client = document.getElementById("message-user-template").innerHTML;
+
+  const rendered = Mustache.render(template_client, {
+    message: text.value, 
+    email: emailUser
+  })
+
+  document.getElementById("mesages").innerHTML += rendered;
 })
