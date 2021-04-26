@@ -338,6 +338,8 @@ input[type="text"]:focus {
   background: #1eb363;
   color: #eee;
   border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
 
 .btn_send:hover {
