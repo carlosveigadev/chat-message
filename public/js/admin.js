@@ -55,3 +55,14 @@ function call(id) {
     });
   });
 }
+
+function sendMessage(id) {
+  const text = document.getElementById(`send_message_${id}`);
+
+  const params = {
+    text: text.value,
+    user_id: id,
+  }
+
+  socket.emit("admin_send_message", params);
+}
