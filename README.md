@@ -7,3 +7,4 @@ Express
 Node
 TypeORM
 SQLite3
+Websocket / Socket IO
