@@ -70,7 +70,7 @@ document.querySelector("#send_message_button").addEventListener("click", (event)
   const text = document.getElementById("message_user");
 
   const params = {
-    text,
+    text: text.value,
     socket_admin_id,
   }
 
