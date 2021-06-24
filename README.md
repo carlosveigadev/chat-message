@@ -7,16 +7,16 @@ Here is developed a chat system where an user sends a message and than a admin o
 **A glimpse**
  
  * The user adds an email and a message. 
-![Exmaple 01](../chat-message/public/images/example01.png)
+![Example 01](public/images/example01.png)
 
   * The support receives an incoming connection.
-![Exmaple 02](../chat-message/public/images/example02.png)
+![Example 02](public/images/example02.png)
 
   * The support enters the chat and answer the user.
- ![Exmaple 03](../chat-message/public/images/example03.png)
+ ![Example 03](public/images/example03.png)
 
   * The user receive the message from the support.
- ![Exmaple 04](../chat-message/public/images/example04.png)
+ ![Example 04](public/images/example04.png)
 
 
 
